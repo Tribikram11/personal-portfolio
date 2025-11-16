@@ -1,0 +1,36 @@
+import profilePic from '../assets/download.jpg'
+import Skills from './Skills';
+
+function AboutMe() {
+    return (
+        <section className="flex justify-center px-40 ">
+        <div
+            className="max-w-8xl mx-auto px-8
+             bg-gray-100 dark:bg-gray-900
+             rounded-xl shadow-inner shadow-neon-pink
+             flex flex-col 
+             items-center space-y-8 md:space-y-0
+             border border-neon-pink"
+>
+
+            {/* --- 6. Right Side: Description --- */}
+            <div className="text-center md:text-left">
+                
+                <p className="mt-4 text-lg text-gray-700 dark:text-gray-300">
+                    Hi! I'm [Your Name], a passionate web developer with a love for
+                    building clean, intuitive, and dynamic user interfaces.
+                    I enjoy turning complex problems into beautiful, simple designs.
+                </p>
+                <p className="mt-2 text-lg text-gray-700 dark:text-gray-300">
+                    When I'm not coding, you can find me exploring new tech, reading, or
+                    [Your Hobby Here].
+                </p>
+            </div>
+
+            <div ><Skills/></div>
+        </div>
+        </section>
+    )
+}
+
+export default AboutMe;
