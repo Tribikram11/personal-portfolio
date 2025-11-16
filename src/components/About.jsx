@@ -17,13 +17,12 @@ function AboutMe() {
             <div className="text-center md:text-left">
                 
                 <p className="mt-4 text-lg text-gray-700 dark:text-gray-300">
-                    Hi! I'm [Your Name], a passionate web developer with a love for
+                    Hi! I'm Tribikram Swain, a passionate web developer with a love for
                     building clean, intuitive, and dynamic user interfaces.
                     I enjoy turning complex problems into beautiful, simple designs.
                 </p>
                 <p className="mt-2 text-lg text-gray-700 dark:text-gray-300">
-                    When I'm not coding, you can find me exploring new tech, reading, or
-                    [Your Hobby Here].
+                    When I'm not coding, you can find me exploring new tech, reading, or traveling.
                 </p>
             </div>
 

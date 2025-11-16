@@ -1,7 +1,7 @@
 import { 
   FaHtml5, FaCss3Alt, FaJs, FaNodeJs, FaPython, FaDatabase
 } from 'react-icons/fa';
-import { SiCanva } from 'react-icons/si';
+import { SiCanva, SiPostgresql, SiTypescript , SiMysql} from 'react-icons/si';
 import SkillCard from './SkillCard';
 
 // 1. Corrected typo from "mySkils" to "mySkills"
@@ -14,7 +14,9 @@ const mySkills = [{
       { name: "JavaScript", icon: <FaJs />, color: "text-yellow-500" },
       { name: "Node.js", icon: <FaNodeJs />, color: "text-green-500" },
       { name: "Python", icon: <FaPython />, color: "text-blue-600" },
-      { name: "MySQL", icon: <FaDatabase />, color: "text-indigo-500" },
+    { name: "MySQL", icon: <SiMysql />, color: "text-indigo-500" },
+    { name: "PostgreSQL", icon: <SiPostgresql />, color: "text-[#336791]" },
+        { name: "Typescript", icon: <SiTypescript />, color: "text-[#336791]" },
     ]
 }]
 
@@ -43,7 +45,7 @@ function Skills(){
                     
                     <div className="
                       grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-7
-                      gap-6
+                      gap-6 py-6
                     ">
                         {categoryData.skills.map((skill, skillIndex) => (
                             <SkillCard

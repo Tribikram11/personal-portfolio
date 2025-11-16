@@ -7,7 +7,7 @@ function Socials() {
       flex flex-col space-y-6  
       z-50                      
     ">
-            <a href="#"
+            <a href="https://www.linkedin.com/in/tribikram-swain"
                 className='text-gray-700 dark:text-gray-300
                         hover:text-neon-pink
                         transition-colors'
@@ -15,7 +15,7 @@ function Socials() {
                 <FaLinkedin size={28} />
             </a>
             <a
-                href="#" 
+                href="https://github.com/Tribikram11" 
                 className="
                 hover:text-neon-pink
                 text-gray-700 dark:text-gray-300
