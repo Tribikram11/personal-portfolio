@@ -4,18 +4,13 @@ import profilePic from '../assets/download.jpg'
 const words = ['web developer', 'coder', 'Traveler']
 
 
-function Hero() {
+function Hero({isScrolled}) {
 
     const[currentIndex, setCurrentIndex] = useState(0);
 
       useEffect(() => {
         const value = setInterval(() => {
-            // words.map((word) => (
-            //     setCurrentIndex(prev => prev + 1)
-            // ))
-            // if(currentIndex == 2){
-            //     setCurrentIndex(0)
-            // }
+        
             setCurrentIndex((prevIndex) => (prevIndex + 1) % words.length)
         }, 2000);
         return () => {
@@ -23,24 +18,25 @@ function Hero() {
         }
     },[])
 
-
-
     return (
         <section className="
         flex flex-col items-center justify-center
         text-center min-h-screen 
         z-10
         ">
-            <img src={profilePic} alt="picture" 
-                className="
-                w-40 h-40 
-                rounded-full 
-                mb-8
-                border-4 border-white
-                dark:border-pink-500
-                dark:shadow-[0_0_25px_theme('colors.pink.500')]
-                transition-all duration-500
-            "/>
+            <img src={profilePic} 
+                 alt="picture" 
+                 className={`relative w-40 h-40 mb-8 
+                            rounded-full border-4
+                            border-white dark:border-pink-500 
+                            dark:shadow-[0_0_25px_theme('colors.pink.500')]
+                            
+                            transition-all duration-700 ease-in-out
+
+                            ${isScrolled ? 'opacity-0 scale-50' : 'opacity-100 scale-100'}
+                            `}
+               
+            />
             <h1 className="
             font-black text-6xl 
             text-blue-500 

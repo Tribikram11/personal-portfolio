@@ -7,8 +7,28 @@ import Projects from "./components/Projects";
 
 function App() {
     const[darkMode, setDarkMode] = useState(true);
+    const[isScrolled, setIsScrolled] = useState(false);
     const aboutRef = useRef(null);
     const projectRef = useRef(null);
+
+    useEffect(() => {
+      const scrolling = () => {
+        if(window.scrollY > 500){
+          setIsScrolled(true)
+        }else{
+          setIsScrolled(false)
+        }
+      }
+
+      window.addEventListener('scroll', scrolling);
+
+      return () => {
+        window.removeEventListener('scroll', scrolling)
+      }
+    },[])
+
+
+
 
     useEffect(() => {
         if(darkMode){
@@ -32,11 +52,11 @@ function App() {
         projectRef={projectRef}
         />
 
-        <Hero/>
+        <Hero isScrolled={isScrolled}/>
 
         <Socials/>
         <div ref={aboutRef}>
-          <AboutMe/>
+          <AboutMe isScrolled={isScrolled}/>
         </div>
         <div ref={projectRef}>
           <Projects/>

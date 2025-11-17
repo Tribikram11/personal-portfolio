@@ -6,8 +6,6 @@ import SkillCard from './SkillCard';
 
 // 1. Corrected typo from "mySkils" to "mySkills"
 const mySkills = [{
-    category: "programming languages",
-    icon: "💻",
     skills:[
       { name: "HTML", icon: <FaHtml5 />, color: "text-orange-500" },
       { name: "CSS", icon: <FaCss3Alt />, color: "text-blue-500" },
@@ -25,7 +23,7 @@ function Skills(){
     console.log("skill got rendered")
     return (
         <>
-            <h2 className='text-4xl font-bold text-center mb-16
+            <h2 className='text-4xl font-bold text-center mb-10
                             text-blue-500 dark:text-neon-cyan
             '>
                 SKILLS
