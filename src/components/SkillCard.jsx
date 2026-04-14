@@ -1,55 +1,23 @@
-function SkillCard({ name, icon, color }) {
+function SkillCard({ icon, color, delay = 0, threadLength = 40 }) {
     return (
-        <div className="
-        relative group
-        w-28 h-28 p-4
-        flex flex-col items-center justify-center
-        rounded-xl border border-gray-200 dark:border-gray-700
-        overflow-hidden
-        bg-gray-100 dark:bg-gray-800
-        transition-all duration-500 ease-out
-        hover:scale-105 hover:shadow-[0_0_20px_rgba(255,255,255,0.15)]
-        ">
-            {/* --- mirror tint overlay --- */}
-            <div className="
-                absolute inset-0
-                bg-gradient-to-tr from-white/10 via-white/5 to-transparent
-                opacity-0 group-hover:opacity-100
-                transition-opacity duration-500 ease-out
-                pointer-events-none
-            "></div>
-
-            {/* --- subtle reflective streak --- */}
-            <div className="
-                absolute -top-1/2 -left-1/2 w-[200%] h-[200%]
-                bg-gradient-to-tr from-transparent via-white/15 to-transparent
-                rotate-12
-                translate-x-[-100%]
-                group-hover:translate-x-[100%]
-                transition-transform duration-[1200ms] ease-out
-                pointer-events-none
-            "></div>
-
-            {/* --- Icon --- */}
+        <div
+            className="skill-swing skill-thread relative flex items-start justify-center"
+            style={{
+                '--swing-delay': `${delay}s`,
+                '--thread-length': `${threadLength}px`,
+            }}
+        >
+            {/* --- Just the icon, no box --- */}
             <div className={`
-                text-4xl mb-2 z-10
+                text-5xl z-10 cursor-pointer
                 transition-transform duration-300 ease-out
-                group-hover:scale-110 ${color}
+                hover:scale-125
+                drop-shadow-[0_0_8px_rgba(255,255,255,0.15)]
+                ${color}
             `}>
                 {icon}
             </div>
-
-            {/* --- Skill Name --- */}
-            <p className="
-                text-sm font-semibold z-10
-                text-gray-700 dark:text-gray-300
-                transition-colors duration-300 ease-out
-                group-hover:text-black dark:group-hover:text-white
-            ">
-                {name}
-            </p>
         </div>
-
     )
 }
 

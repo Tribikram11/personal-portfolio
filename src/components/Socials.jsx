@@ -3,7 +3,7 @@ import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
 function Socials() {
     return (
         <nav className="
-      absolute bottom-8 left-8   
+      fixed bottom-8 left-8   
       flex flex-col space-y-6  
       z-50                      
     ">
